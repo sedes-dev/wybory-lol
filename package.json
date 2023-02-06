@@ -1,0 +1,21 @@
+{
+  "name": "wybory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "http-server",
+    "build": "npm run build:styles && npm run build:scripts",
+    "build:styles": "lessc ./src/main.less ./dist/styles.css",
+    "build:scripts": "browserify ./src/main.js -o ./dist/scripts.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "http-server": "^14.1.1",
+    "jquery": "^3.6.3",
+    "less": "^4.1.3"
+  }
+}
