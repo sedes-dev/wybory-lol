@@ -1,6 +1,77 @@
 .party {
-  &__head {
+  &--pis {
+    width: calc(100% * (var(--score-pis) / var(--score-total)));
+
+    @media (orientation: portrait) {
+      width: calc(100vh * var(--score-pis));
+    }
+  }
+
+  &--ko {
+    width: calc(100% * (var(--score-ko) / var(--score-total)));
+
+    @media (orientation: portrait) {
+      width: calc(100vh * (var(--score-ko) / var(--score-total)));
+    }
+  }
+
+  &--p2050 {
+    width: calc(100% * (var(--score-p2050) / var(--score-total)));
+
+    @media (orientation: portrait) {
+      width: calc(100vh * var(--score-p2050));
+    }
+  }
+
+  &--lewica {
+    width: calc(100% * (var(--score-lewica) / var(--score-total)));
+
+    @media (orientation: portrait) {
+      width: calc(100vh * var(--score-lewica));
+    }
+  }
+
+  &--kuce {
+    width: calc(100% * (var(--score-kuce) / var(--score-total)));
+
+    @media (orientation: portrait) {
+      width: calc(100vh * var(--score-kuce));
+    }
+  }
+
+  &--psl {
+    width: calc(100% * (var(--score-psl) / var(--score-total)));
+
+    @media (orientation: portrait) {
+      width: calc(100vh * var(--score-psl));
+    }
+  }
+
+  &__wrapper {
     width: 100%;
     padding-bottom: 100%;
+    position: relative;
+  }
+
+  &__head {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    filter: drop-shadow(5px 5px 5px #222);
+    z-index: 1;
+  }
+
+  &__percent {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 10vw;
+    z-index: 2;
+    display: none;
   }
 }

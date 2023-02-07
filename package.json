@@ -4,17 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "http-server",
-    "build": "npm run build:styles && npm run build:scripts",
-    "build:styles": "lessc ./src/main.less ./dist/styles.css",
-    "build:scripts": "browserify ./src/main.js -o ./dist/scripts.js"
+    "start": "grunt prod && npm server",
+    "dev": "grunt dev",
+    "server": "http-server -p 3333"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "browserify": "^17.0.0",
-    "http-server": "^14.1.1",
+    "grunt": "^1.6.1",
+    "grunt-browserify": "^6.0.0",
+    "grunt-contrib-connect": "^3.0.0",
+    "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "jquery": "^3.6.3",
     "less": "^4.1.3"
   }
