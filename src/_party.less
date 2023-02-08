@@ -1,49 +1,85 @@
 .party {
   &--pis {
     width: calc(100% * (var(--score-pis) / var(--score-total)));
+    order: var(--order-pis);
 
     @media (orientation: portrait) {
       width: calc(100vh * var(--score-pis));
+    }
+
+    .party__percent {
+      font-size: ~"max(calc(15vw * (var(--score-pis) / var(--score-total))), 14px)";
+      transform: translate(-50%, -50%) rotate(var(--rotate-pis));
     }
   }
 
   &--ko {
     width: calc(100% * (var(--score-ko) / var(--score-total)));
+    order: var(--order-ko);
 
     @media (orientation: portrait) {
       width: calc(100vh * (var(--score-ko) / var(--score-total)));
+    }
+
+    .party__percent {
+      font-size: ~"max(calc(15vw * (var(--score-ko) / var(--score-total))), 14px)";
+      transform: translate(-50%, -50%) rotate(var(--rotate-ko));
     }
   }
 
   &--p2050 {
     width: calc(100% * (var(--score-p2050) / var(--score-total)));
+    order: var(--order-p2050);
 
     @media (orientation: portrait) {
       width: calc(100vh * var(--score-p2050));
+    }
+
+    .party__percent {
+      font-size: ~"max(calc(15vw * (var(--score-p2050) / var(--score-total))), 14px)";
+      transform: translate(-50%, -50%) rotate(var(--rotate-p2050));
     }
   }
 
   &--lewica {
     width: calc(100% * (var(--score-lewica) / var(--score-total)));
+    order: var(--order-lewica);
 
     @media (orientation: portrait) {
       width: calc(100vh * var(--score-lewica));
+    }
+
+    .party__percent {
+      font-size: ~"max(calc(15vw * (var(--score-lewica) / var(--score-total))), 14px)";
+      transform: translate(-50%, -50%) rotate(var(--rotate-lewica));
     }
   }
 
   &--kuce {
     width: calc(100% * (var(--score-kuce) / var(--score-total)));
+    order: var(--order-kuce);
 
     @media (orientation: portrait) {
       width: calc(100vh * var(--score-kuce));
+    }
+
+    .party__percent {
+      font-size: ~"max(calc(15vw * (var(--score-kuce) / var(--score-total))), 14px)";
+      transform: translate(-50%, -50%) rotate(var(--rotate-kuce));
     }
   }
 
   &--psl {
     width: calc(100% * (var(--score-psl) / var(--score-total)));
+    order: var(--order-psl);
 
     @media (orientation: portrait) {
       width: calc(100vh * var(--score-psl));
+    }
+
+    .party__percent {
+      font-size: ~"max(calc(15vw * (var(--score-psl) / var(--score-total))), 14px)";
+      transform: translate(-50%, -50%) rotate(var(--rotate-psl));
     }
   }
 
@@ -68,10 +104,10 @@
     position: absolute;
     left: 50%;
     top: 0;
-    transform: translateX(-50%);
+    box-shadow: 0 0 10px 0 #222;
     font-weight: bold;
-    font-size: 10vw;
+    background-color: #fff;
+    padding: 1% 5%;
     z-index: 2;
-    display: none;
   }
 }
