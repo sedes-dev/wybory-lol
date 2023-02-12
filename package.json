@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "grunt prod && npm server",
+    "start": "npm run prod && npm run server",
     "dev": "grunt dev",
+    "prod": "grunt prod",
     "server": "http-server -p 3333"
   },
   "keywords": [],

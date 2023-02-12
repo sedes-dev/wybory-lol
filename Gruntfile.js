@@ -1,9 +1,23 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     browserify: {
-      build: {
+      dev: {
         src: 'src/main.js',
-        dest: 'dist/scripts.js'
+        dest: 'dist/scripts.js',
+        options: {
+          alias: [
+            './src/_config.dev.js:config'
+          ]
+        }
+      },
+      prod: {
+        src: 'src/main.js',
+        dest: 'dist/scripts.js',
+        options: {
+          alias: [
+            './src/_config.prod.js:config'
+          ]
+        }
       }
     },
     less: {
@@ -37,13 +51,13 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dev', [
     'connect',
-    'browserify',
+    'browserify:dev',
     'less',
-    'watch',
+    'watch'
   ]);
 
   grunt.registerTask('prod', [
-    'browserify',
+    'browserify:prod',
     'less'
   ]);
 }
