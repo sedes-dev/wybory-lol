@@ -10999,7 +10999,7 @@ const config = require("config");
 
 $(() => {
   $.ajax(config.reqUrl, {
-    type: 'JSON',
+    dataType: 'JSON',
     success: (poolData) => {
       setCssVars(poolData[0].results);
       setPercentValues(poolData[0].results);
