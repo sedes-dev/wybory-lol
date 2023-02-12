@@ -7,7 +7,9 @@
     "start": "npm run prod && npm run server",
     "dev": "grunt dev",
     "prod": "grunt prod",
-    "server": "http-server -p 3333"
+    "server": "http-server -p 3333",
+    "deploy": "gh-pages -d ghpage",
+    "predeploy": "npm run prod && node createGHPageDir.js"
   },
   "keywords": [],
   "author": "",
@@ -21,5 +23,8 @@
     "grunt-contrib-watch": "^1.1.0",
     "jquery": "^3.6.3",
     "less": "^4.1.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
