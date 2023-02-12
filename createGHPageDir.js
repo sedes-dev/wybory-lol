@@ -9,7 +9,7 @@ async function createGHPageDir() {
   await fs.promises.cp('./index.html', './ghpage/index.html');
   await fs.promises.cp('./static', './ghpage/static', {recursive: true});
   await fs.promises.cp('./dist', './ghpage/dist', {recursive: true});
-  await fs.promises.appendFileSync('./ghpage/CNAME', 'wybory.lol', {flag: 'w'});
+  await fs.promises.appendFile('./ghpage/CNAME', 'wybory.lol', {flag: 'w'});
 }
 
 createGHPageDir();
