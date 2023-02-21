@@ -18,8 +18,11 @@ function setCssVars(results) {
   const total = results.reduce((total, result) => (total + result.score), 0);
 
   $('#css-result-vars').text(':root {\n' +
-    results.sort().reduce((style, result, index) => {
-
+    results.sort((r1, r2) => {
+      if (r1.score > r2.score) return -1;
+      if (r1.score < r2.score) return 1;
+      return 0;
+    }).reduce((style, result, index) => {
       return style + `--score-${result.party}: ${result.score};\n--order-${result.party}: ${index + 1};\n--rotate-${result.party}: ${Math.round(-15 + Math.random() * 30)}deg;\n`;
     }, `--score-total: ${total};\n--score-top: ${results.sort()[0].score};\n`)
     + '}');
