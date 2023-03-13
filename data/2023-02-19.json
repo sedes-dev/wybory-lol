@@ -1,32 +1,32 @@
 [
   {
-    "provider": "Research Partner",
-    "date": "2023-03-06",
+    "provider": "United Surveys",
+    "date": "2023-02-19",
     "type": "separated",
     "results": [
       {
         "party": "pis",
-        "score": 0.328
+        "score": 0.336
       },
       {
         "party": "ko",
-        "score": 0.267
+        "score": 0.272
       },
       {
         "party": "lewica",
-        "score": 0.088
+        "score": 0.087
       },
       {
         "party": "p2050",
-        "score": 0.081
+        "score": 0.075
       },
       {
         "party": "kuce",
-        "score": 0.071
+        "score": 0.069
       },
       {
         "party": "psl",
-        "score": 0.053
+        "score": 0.07
       }
     ]
   }
