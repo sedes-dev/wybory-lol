@@ -1,32 +1,32 @@
 [
   {
-    "provider": "IPSOS",
-    "date": "2023-03-19",
+    "provider": "Research Partner",
+    "date": "2023-03-06",
     "type": "separated",
     "results": [
       {
         "party": "pis",
-        "score": 0.34
+        "score": 0.328
       },
       {
         "party": "ko",
-        "score": 0.27
+        "score": 0.267
       },
       {
         "party": "lewica",
-        "score": 0.08
+        "score": 0.088
       },
       {
         "party": "p2050",
-        "score": 0.06
+        "score": 0.081
       },
       {
         "party": "kuce",
-        "score": 0.11
+        "score": 0.071
       },
       {
         "party": "psl",
-        "score": 0.05
+        "score": 0.053
       }
     ]
   }
